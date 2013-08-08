@@ -23,7 +23,7 @@ public class RopertyUI extends UI {
 	@Override
 	protected void init(VaadinRequest request) {
 	    
-	    this.getPage().setTitle("ClouTree - Centralize your app!");
+	    this.getPage().setTitle("Roperty - The UI!");
 	    
 	    RopertyUiMainNavigator navigator = new RopertyUiMainNavigator(this, this);
 	    NavigationRegistry.registerNavigator(Frames.MAIN, navigator);
