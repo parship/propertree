@@ -1,17 +1,15 @@
 
 package com.parship.roperty.ui.persistence.entity;
 
-import java.util.LinkedList;
-import java.util.List;
+import com.parship.roperty.ui.permission.Permissions;
+import org.apache.commons.lang3.StringUtils;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
-import org.apache.commons.lang.StringUtils;
-
-import com.parship.roperty.ui.permission.Permissions;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * TODO
@@ -23,31 +21,31 @@ import com.parship.roperty.ui.permission.Permissions;
 
 @Entity
 public class User {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    
+
     private String username;
-    
+
     private byte[] password;
-    
+
     private byte[] salt;
-    
+
     private String name;
-    
+
     private String firstname;
-    
+
     private String email;
-    
+
     private String permission;
-    
+
     private Boolean active;
-    
+
     public User() {
-	
+
     }
-    
+
     public User(Integer id, String username, byte[] password, byte[] salt) {
 	super();
 	this.id = id;
@@ -110,7 +108,7 @@ public class User {
     public void setEmail(String email) {
         this.email = email;
     }
-    
+
     public String getPermission() {
         return permission;
     }
@@ -130,24 +128,24 @@ public class User {
     public String getFullName() {
 	return this.getFirstname() + " " + this.getName();
     }
-    
+
     public List<Permissions> getPermissionList(){
-	
+
 	LinkedList<Permissions> result = new LinkedList<Permissions>();
 	String[] permissions = StringUtils.split(this.permission, ",");
-	
+
 	Permissions permTemp;
 	for(String permission : permissions) {
-	    
+
 	    permTemp = Permissions.valueOf(permission);
 	    if (permTemp != null) {
 		result.add(permTemp);
 	    }
-	    
+
 	}
-	
+
 	return result;
-	
+
     }
-    
+
 }
