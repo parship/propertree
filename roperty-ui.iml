@@ -18,6 +18,9 @@
           <root url="file://$MODULE_DIR$/src/main/webapp" relative="/" />
         </webroots>
       </configuration>
+      <facet type="Vaadin" name="Vaadin Application">
+        <configuration vaadinUsedWebRootPathUrl="" vaadinGWTLocationPath="" vaadinVMOptions="-Xss8M -Xmx512M -XX:MaxPermSize=512M" vaadinJavaScriptStyle="Obfuscated" vaadinCompilerThreads="" />
+      </facet>
     </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7" inherit-compiler-output="false">
