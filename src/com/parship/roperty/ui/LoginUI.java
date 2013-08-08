@@ -101,9 +101,8 @@ public class LoginUI extends CustomComponent implements Button.ClickListener, Vi
 	
 	/* MenuBar */
 	// About
-	MenuBar.MenuItem about = menuBar.addItem("About ClouTree", null);
+	MenuBar.MenuItem about = menuBar.addItem("About Roperty", null);
 	about.addItem("Visit Website", null);
-	about.addItem("Register for beta", null);
 	about.addItem("Team", null);
 	
 	// Debug
