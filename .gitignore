@@ -6,4 +6,5 @@ target
 .gwt
 .settings
 .metadata
+.DS_Store
 /build
