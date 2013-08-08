@@ -40,9 +40,9 @@ public class UserService {
 
 		User result = null;
 		EntityManager mgr = this.emf.createEntityManager();
-		Query query = mgr.createQuery("SELECT u FROM " + User.class.getName() + " u WHERE u.username = :username");
-		query.setParameter("username", username);
 		try {
+			Query query = mgr.createQuery("SELECT u FROM " + User.class.getName() + " u WHERE u.username = :username");
+			query.setParameter("username", username);
 			result = (User)query.getSingleResult();
 		} catch (NoResultException e) {
 			// TODO
