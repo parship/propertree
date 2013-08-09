@@ -38,7 +38,7 @@ public class UserService {
 	private EntityManagerFactory emf;
 
 	public UserService() {
-		this.emf = Persistence.createEntityManagerFactory("ClouTree");
+		this.emf = Persistence.createEntityManagerFactory("roperty-ui");
 	}
 
 	public User getUser(Integer id) {
